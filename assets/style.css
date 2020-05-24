@@ -1,0 +1,141 @@
+
+@font-face {
+font-family: 'InterBold';
+src: url("Inter-Bold.ttf") format("truetype");
+}
+
+@font-face {
+font-family: 'InterMed';
+src: url("Inter-Medium.ttf") format("truetype");
+}
+
+@font-face {
+font-family: 'InterReg';
+src: url("Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+font-family: 'InterLight';
+src: url("Inter-Light.ttf") format("truetype");
+}
+@font-face {
+font-family: 'InterThin';
+src: url("Inter-Thin.ttf") format("truetype");
+}
+
+
+
+
+}
+
+html, body {
+	height: 100%;
+}
+
+.x0, .y0, .z0 {
+	display: inline;
+}
+
+.x1, .y1, .z1 {
+	display: inline;
+	text-decoration: underline;
+}
+
+.header {
+	width: 100%;
+	height: 100vh;
+}
+
+.bodycopy {
+	/*transition: transform 0.9s cubic-bezier(.50, .08, 0, .99);*/
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 60%;
+	transform: translate(-50%, -50%);
+	font: 35px/50px InterMed;
+}
+
+.description {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100vh;
+		display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 3%;
+
+}
+
+.description-header h2{
+		font-family: InterMed;
+	font-size: 45px;
+	/*margin: 0px;*/
+}
+.description-header p{
+	font: 25px/20px InterLight;
+
+}
+
+.description-desc p{
+	font: 25px/40px InterReg;
+	/*margin: 0;*/
+}
+.schedule {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100vh;
+}
+
+.schedule-header h2 {
+	font-family: InterMed;
+	font-size: 35px;
+}
+
+.daywise {
+		display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 3%;
+
+}
+.day h2 {
+		font: 25px/40px InterBold;
+
+}
+
+.day p {
+		font: 20px/40px InterReg;
+
+}
+/*a.button:link {
+	color: black;
+	font-size: 14px;
+	background-color: aquamarine;
+}
+
+a.button:hover {
+	color: black;
+	font-size: 14px;
+	background-color: transparent;
+}
+
+a.button:active {
+	color: black;
+	font-size: 10px;
+	background-color: transparent;
+}
+
+a.button:visited {
+	color: black;
+}
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: black;
+}*/
+

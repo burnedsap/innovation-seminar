@@ -18,6 +18,7 @@ src: url("Inter-Regular.ttf") format("truetype");
 font-family: 'InterLight';
 src: url("Inter-Light.ttf") format("truetype");
 }
+
 @font-face {
 font-family: 'InterThin';
 src: url("Inter-Thin.ttf") format("truetype");
@@ -42,8 +43,11 @@ html, body {
 }
 
 .header {
-	width: 100%;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 	height: 100vh;
+	overflow: hidden;
 }
 
 .bodycopy {
@@ -57,31 +61,87 @@ html, body {
 	font: 35px/50px InterMed;
 }
 
-.description {
+
+.header-description {
+	width: 100%;
+	overflow: hidden;
+}
+
+.header-description h2 {
+	font-family: InterReg;
+	font-size: 18px;
+	/*margin: 0px;*/
+}
+
+.header-links {
+	float: right;
+}
+
+.header-description a {
+	float: left;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	font: 16px/20px InterLight;
+	padding: 12px;
+}
+
+.header-description a:hover {
+	text-decoration: underline;
+}
+
+.header-description span {
+	font: 16px/20px InterReg;
+}
+
+
+/*ABOUT SECTION*/
+
+.about {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
-	height: 100vh;
+	height: 80vh;
+}
+
+.about-grid {
 		display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 3%;
-
+	height: 100%;
 }
 
-.description-header h2{
-		font-family: InterMed;
-	font-size: 45px;
-	/*margin: 0px;*/
-}
-.description-header p{
-	font: 25px/20px InterLight;
-
+.about-grid p {
+	font: 16px/24px InterLight;
 }
 
-.description-desc p{
-	font: 25px/40px InterReg;
-	/*margin: 0;*/
+.about-grid img {
+	width: 100%;
+	grid-column-start: 2;
+	grid-column-end: 4;
 }
+
+.para {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+.para a {
+	text-decoration: none;
+	color: black;
+}
+
+.para a:hover {
+		text-decoration: underline;
+		background: black;
+		color: white;
+
+}
+/*.para {
+	display: block;
+	justify-content: space-between;
+}*/
+
 .schedule {
 	width: 80%;
 	margin-left: auto;
@@ -89,24 +149,27 @@ html, body {
 	height: 100vh;
 }
 
-.schedule-header h2 {
-	font-family: InterMed;
-	font-size: 35px;
-}
 
 .daywise {
-		display: grid;
+	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-column-gap: 3%;
-
 }
-.day h2 {
-		font: 25px/40px InterBold;
 
+.day h2 {
+	font: 20px/40px InterBold;
+	margin: 0;
+	padding: 0;
 }
 
 .day p {
-		font: 20px/40px InterReg;
+	font: 16px/40px InterReg;
+	margin: 0;
+}
+.day span {
+		font: 30px/40px InterReg;
+		margin: 0;
+		padding: 0;
 
 }
 /*a.button:link {

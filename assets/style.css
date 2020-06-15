@@ -29,32 +29,32 @@ src: url("Inter-Thin.ttf") format("truetype");
 	--body: 16px/24px InterLight;
 	--bodysp: 18px/28px InterMed;
 	--header: 16px/24px InterMed;
-	--caption: 14px/10px InterLight
+	--caption: 14px/16px InterLight
 }
+
 
 @media only screen and (max-width: 1024px) {
 	:root {
 		--w: 95%;
 	}
 	
+	.header .bodycopy {
+		font: 28px/40px InterMed;
+	}
+	
+	.header-links {
+		display: none;
+	}
 	.intro {
 		margin: 0px 0 100px;
 	}
 	
 	.intro .intro-grid {
-		grid-template-columns: repeat(1, 1fr);
-		grid-column-gap: 3%;
-		grid-row-gap: 10%;
+		display: block;
 	}
-	
-	.intro-grid .slide-image {
-		grid-column-start: 1;
-		grid-column-end: 2;
-	}
-	
+		
 	.intro-grid .para {
-		grid-column-start: 0;
-		grid-column-end: 1;
+		margin-bottom: 100px;
 	}
 	
 	.map {
@@ -62,24 +62,42 @@ src: url("Inter-Thin.ttf") format("truetype");
 	}
 	
 	.map .map-grid {
-		grid-template-columns: repeat(1, 1fr);
-		grid-column-gap: 3%;
-		grid-row-gap: 10%;
+		display: block;	
 	}
 	
 	.map .map-embed {
-		grid-column-start: 1;
-		grid-column-end: 2;
+		height: 400px;
 	}
 	
 	.map .para {
-		grid-column-start: 0;
-		grid-column-end: 1;
+		margin-bottom: 100px;
 	}
 	
-	.workshop {
-		margin: 100px 0;
-		grid-template-columns: repeat(1, 1fr);
+	.workshop .w-grid {
+		display: block;
+	}
+	
+	.w-grid .tools {
+		margin-bottom: 100px;
+	}
+	
+	.project-grid .project {
+		display: block;
+	}
+	.project .para {
+		margin-bottom: 50px;
+	}
+	.exhibition .exhibition-grid {
+		display: block;
+	}
+	.exhibition-grid .para {
+		margin-bottom: 50px;
+	}
+	.about .about-grid {
+		display: block;
+	}
+	.about-grid .para {
+		margin-bottom: 50px;
 	}
 }
 
@@ -88,7 +106,7 @@ src: url("Inter-Thin.ttf") format("truetype");
 		--w: 90%;
 		--body: 14px/20px InterLight;
 		--bodysp: 16px/24px InterMed;
-		--caption: 12px/10px InterLight
+		--caption: 12px/15px InterLight
 	}
 	
 	.intro {
@@ -113,6 +131,7 @@ src: url("Inter-Thin.ttf") format("truetype");
 	
 	.workshop {
 		margin: 100px 0;
+		display: block;
 	}
 	.exhibition .exhibition-grid {
 		grid-template-columns: repeat(2, 1fr);
@@ -126,6 +145,7 @@ src: url("Inter-Thin.ttf") format("truetype");
 
 html, body {
 	height: 100%;
+	margin: 0;
 }
 
 .x0, .y0, .z0 {
@@ -228,6 +248,10 @@ html, body {
 	grid-column-end: 2;
 }
 
+.intro .slide-image {
+	width: 100%;
+}
+
 .para a {
 	text-decoration: underline;
 	color: black;
@@ -262,19 +286,24 @@ html, body {
 	grid-column-end: 4;
 }
 
+
+/*WORKSHOP SECTION*/
+
+
 .workshop {
 	width: var(--w);
 	margin: 200px 0;
 	margin-left: auto;
 	margin-right: auto;
+	}
+	
+	.w-grid {
+	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 15%;
-	/*background: teal;*/
 }
 
-
-/*WORKSHOP SECTION*/
 
 .workshop-grid {
 	margin-top: 50px;
@@ -301,8 +330,8 @@ html, body {
 }
 
 .workshop p {
-font: var(--body);
-margin: 0;
+	font: var(--body);
+	margin: 0;
 }
 
 
@@ -323,23 +352,21 @@ margin: 0;
 }
 
 .project-section h2 {
+	margin-top: 0px;
 	font: var(--bodysp);
 }
 
-.project-grid {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
-	grid-column-gap: 3%;
-	grid-row-gap: 10%;
-	height: 100%;
-}
 
 .project {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 3%;
-	height: 100%;
+	margin-bottom: 100px;
+}
 
+.project .slides {
+	width: 100%;
+	height: 100%;
 }
 
 /*EXHIBTION*/
@@ -353,15 +380,14 @@ margin: 0;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 3%;
-	/*height: 100%;*/
 }
-.exhibition .para {
-	grid-column-start: 1;
-	grid-column-end: 2;
+.exhibition-grid .para {
+	/*grid-column-start: 1;*/
+	/*grid-column-end: 2;*/
 }
-.exhibition .yt-video {
-		grid-column-start: 2;
-	grid-column-end: 5;
+.exhibition-grid .yt-video {
+		/*grid-column-start: 2;*/
+	/*grid-column-end: 3;*/
 }
 .yt-video {
 	height: 500px;
@@ -381,10 +407,8 @@ margin: 0;
 
 /*ABOUT SECTION*/
 .about {
-	margin: 200px 0;
+	margin: 200px auto 50px;
 	width: var(--w);
-	margin-left: auto;
-	margin-right: auto;
 	display: grid;
 }
 .about p span {
@@ -394,7 +418,7 @@ margin: 0;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 3%;
-	height: 100%;
+/*	height: 100%;*/
 }
 
 

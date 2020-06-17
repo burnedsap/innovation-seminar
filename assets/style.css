@@ -29,7 +29,8 @@ src: url("Inter-Thin.ttf") format("truetype");
 	--body: 16px/24px InterLight;
 	--bodysp: 18px/28px InterMed;
 	--header: 16px/24px InterMed;
-	--caption: 14px/16px InterLight
+	--caption: 14px/16px InterLight;
+	--slidew: 400px;
 }
 
 
@@ -396,12 +397,18 @@ html, body {
 .exhibition p  {
 	font: var(--body);
 }
-.exhibitio a {
+.exhibition a {
 	color: black;
 }
 
 .exhibition p span {
 	font: var(--bodysp);
+}
+
+.final-presentation {
+	/*height: 570px;*/
+	grid-column-start: 1;
+	grid-column-end: 4;
 }
 
 

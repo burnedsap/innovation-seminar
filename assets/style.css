@@ -141,11 +141,14 @@ src: url("Inter-Thin.ttf") format("truetype");
 	}
 	.exhibition .yt-video {
 	height: 400px;
-}
+	}
+	.about {
+		margin: 100px 0 50px;
+	}
 }
 
 html, body {
-	height: 100%;
+	/*height: 100%;*/
 	margin: 0;
 }
 
@@ -414,9 +417,8 @@ html, body {
 
 /*ABOUT SECTION*/
 .about {
-	margin: 200px auto 50px;
+	margin: 150px auto 100px;
 	width: var(--w);
-	display: grid;
 }
 .about p span {
 	font: var(--bodysp);
@@ -425,62 +427,5 @@ html, body {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap: 3%;
-/*	height: 100%;*/
 }
-
-
-
-
-/*iframe{
-	/*position: absolute;*!/
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}*/
-/*.google-slides-container{
-    position: relative;
-    width: 100%;
-    padding-top: 60%;
-    overflow: hidden;
-}
-
-.google-slides-container iframe{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}*/
-
-
-/*a.button:link {
-	color: black;
-	font-size: 14px;
-	background-color: aquamarine;
-}
-
-a.button:hover {
-	color: black;
-	font-size: 14px;
-	background-color: transparent;
-}
-
-a.button:active {
-	color: black;
-	font-size: 10px;
-	background-color: transparent;
-}
-
-a.button:visited {
-	color: black;
-}
-
-a:link {
-	color: black;
-}
-
-a:visited {
-	color: black;
-}*/
 

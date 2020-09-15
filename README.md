@@ -1,3 +1,3 @@
-# innovation-seminar
+# DigikatMicrosite
 
 https://burnedsap.github.io/innovation-seminar/.
